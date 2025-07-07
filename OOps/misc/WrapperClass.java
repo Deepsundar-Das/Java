@@ -19,16 +19,20 @@ class WrapperClass {
     => what I understand,
         let memory addresses of 'a' and 'b' are S100 and S200 (in stack memory)
         in heap memory let say two addresses are H101 and H201 where 10 and 20 is present and 100 and 200 are pointing to them
-        now when I passed value of 'a' and 'b' in the changeValue it created another memory like S300 and S400
-        and refer the memory to H101 and H201 in heap
-        eg :
-         S100 --> H101 --> 10 and S200 --> H201 --> 20
-         S300 --> H101 --> 10 and S400 --> H201 --> 20
+        now when I passed value of 'a' and 'b' in the changeValue it created another memory space in heap memory and assigned the value 10 and 20
+        let say the memory is H203 and H304 this does not need to be stored in the stack it can be passed immediately
 
-         now these S300 and S400 are passed so any out of the scope the function actual value of 'a' and 'b' are not changed
+        eg: S100 -> H101 -> 10 and H203 -> 10
+            S200 -> H201 -> 20 and H304 -> 20
 
-         and if I try to change the value of a in tht changeValue function as Integer is final(immutable) class this will create
-        another object in heap it will point to that object
+        now they are separate now they could not affect each other
+
+    */
+
+    /*
+
+    but for non-premitives the copy of the stack's value(object's stored memory address) is passed to the method that is why
+   the changes in an reference is seen to the other reference
     */
     static void changeValue(Integer a, Integer b) {
         Integer temp = a;
