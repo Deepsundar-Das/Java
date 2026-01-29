@@ -4,7 +4,7 @@ class Test{
         
         var i = 3;
         for(; i < 10; i++){
-            System.out.print(i + '\t');
+            System.out.println(i);
         }
     }
 }
