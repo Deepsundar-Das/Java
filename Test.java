@@ -1,5 +1,5 @@
 class Test{
-    void main() {
+    public static void main() {
         System.out.println("Hello Universe");
         
         var i = 3;
