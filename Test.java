@@ -1,4 +1,6 @@
-void main() {
-    System.out.println("Hello Universe");
-    var i = 3;
+class Test{
+    void main() {
+        System.out.println("Hello Universe");
+        var i = 3;
+    }
 }
