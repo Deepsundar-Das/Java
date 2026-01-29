@@ -3,7 +3,7 @@ class Test{
         System.out.println("Hello Universe");
         
         var i = 3;
-        for(; i < 10; i+){
+        for(; i < 10; i++){
             System.out.print(i + '\t');
         }
     }
